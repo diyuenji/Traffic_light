@@ -1,0 +1,9 @@
+led_traffic.c:9:6:setLEDRED1	8	static
+led_traffic.c:13:6:setLEDYELLOW1	8	static
+led_traffic.c:17:6:setLEDGREEN1	8	static
+led_traffic.c:22:6:setLEDRED2	8	static
+led_traffic.c:26:6:setLEDYELLOW2	8	static
+led_traffic.c:30:6:setLEDGREEN2	8	static
+led_traffic.c:35:6:setLEDRED3	8	static
+led_traffic.c:39:6:setLEDYELLOW3	8	static
+led_traffic.c:43:6:setLEDGREEN3	8	static
