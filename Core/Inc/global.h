@@ -14,16 +14,27 @@
 //#include "traffic.h"
 
 #define INIT 0
-#define AUTO_RED 1
-#define AUTO_GREEN 2
-#define AUTO_YELLOW 3
+#define RED1_GREEN2 		1
+#define RED1_YELLOW2 		2
+#define GREEN1_RED2 		3
+#define YELLOW1_RED2 		4
 
-#define MAN_RED_GREEN 0
-#define MAN_RED_YELLOW 1
-#define MAN_GREEN_RED 2
-#define MAN_GREEN_YELLOW 3
-#define MAN_YELLOW_RED 4
-#define MAN_YELLOW_GREEN 5
-extern int state;
+#define MAN_RED1_GREEN2 	20
+#define MAN_RED1_YELLOW2 	21
+#define MAN_GREEN1_RED2 	22
+#define MAN_YELLOW1_RED2 	23
+
+#define TUNING_RED1			40
+#define TUNING_GREEN1		41
+#define TUNING_YELLOW1		42
+#define TUNING_GREEN2		43
+
 extern int status;
+extern int red_time_1;
+extern int green_time_1;
+extern int yellow_time_1;
+extern int red_time_2;
+extern int green_time_2;
+extern int yellow_time_2;
+
 #endif /* INC_GLOBAL_H_ */

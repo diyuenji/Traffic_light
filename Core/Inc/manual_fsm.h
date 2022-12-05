@@ -8,7 +8,8 @@
 #ifndef INC_MANUAL_FSM_H_
 #define INC_MANUAL_FSM_H_
 
-#include"global.h"
+#include "global.h"
+#include "led_traffic.h"
 
 void fsm_manual_run();
 
