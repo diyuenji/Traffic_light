@@ -29,12 +29,25 @@
 #define TUNING_YELLOW1		42
 #define TUNING_GREEN2		43
 
+#define INIT_PEDES			50
+#define PEDES_RUN			51
+
 extern int status;
+extern int status_pedes;
+
+extern int time_of_light;
+extern int time_of_light_2;
+
 extern int red_time_1;
 extern int green_time_1;
 extern int yellow_time_1;
 extern int red_time_2;
 extern int green_time_2;
 extern int yellow_time_2;
+extern int time_man_mode;
+
+extern int RED_INC;
+extern int YELLOW_INC;
+extern int GREEN_INC;
 
 #endif /* INC_GLOBAL_H_ */

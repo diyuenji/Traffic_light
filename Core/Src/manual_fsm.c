@@ -22,7 +22,7 @@ void fsm_manual_run(){
 
 			if(isButton2Pressed()){
 				status=MAN_RED1_YELLOW2;
-				setTimer1(10000);
+				setTimer1(time_man_mode * 1000);
 			}
 
 			if (isButton1Pressed()){
@@ -40,7 +40,7 @@ void fsm_manual_run(){
 
 			if(isButton2Pressed()){
 				status=MAN_GREEN1_RED2;
-				setTimer1(10000);
+				setTimer1(time_man_mode * 1000);
 			}
 
 			if (isButton1Pressed()){
@@ -59,7 +59,7 @@ void fsm_manual_run(){
 
 			if(isButton2Pressed()){
 				status=MAN_YELLOW1_RED2;
-				setTimer1(10000);
+				setTimer1(time_man_mode * 1000);
 			}
 
 			if (isButton1Pressed()){
@@ -78,7 +78,7 @@ void fsm_manual_run(){
 
 			if(isButton2Pressed()){
 				status=MAN_RED1_GREEN2;
-				setTimer1(1000);
+				setTimer1(time_man_mode * 1000);
 			}
 
 			if (isButton1Pressed()){

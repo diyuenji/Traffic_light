@@ -22,4 +22,5 @@ void clearLED2();
 void setLEDRED3();
 void setLEDYELLOW3();
 void setLEDGREEN3();
+void clearLED3();
 #endif /* INC_LED_TRAFFIC_H_ */
