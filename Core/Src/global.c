@@ -18,6 +18,8 @@ int red_time_2 = 5;
 int green_time_2 = 3;
 int yellow_time_2 = 2;
 
+
+
 int time_man_mode = 10;
 
 int time_of_light = 0;

@@ -25,7 +25,8 @@ Core/Src/fsm_pedes.o: ../Core/Src/fsm_pedes.c ../Core/Inc/fsm_pedes.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/led_traffic.h ../Core/Inc/transmit_info.h
+ ../Core/Inc/led_traffic.h ../Core/Inc/transmit_info.h \
+ ../Core/Inc/buzzer.h
 
 ../Core/Inc/fsm_pedes.h:
 
@@ -90,3 +91,5 @@ Core/Src/fsm_pedes.o: ../Core/Src/fsm_pedes.c ../Core/Inc/fsm_pedes.h \
 ../Core/Inc/led_traffic.h:
 
 ../Core/Inc/transmit_info.h:
+
+../Core/Inc/buzzer.h:

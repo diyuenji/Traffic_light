@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include "main.h"
 #include "transmit_info.h"
+#include "buzzer.h"
 
 
 
@@ -42,6 +43,10 @@ extern int status_pedes;
 
 extern int time_of_light;
 extern int time_of_light_2;
+
+
+#define yellow_pedes_time 2
+
 
 extern int val_info1;
 extern int val_info2;

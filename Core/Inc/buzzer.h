@@ -8,6 +8,8 @@
 #ifndef INC_BUZZER_H_
 #define INC_BUZZER_H_
 
-void Buzzer();
+#include "stdio.h"
+#include "main.h"
+void buzzer();
 
 #endif /* INC_BUZZER_H_ */

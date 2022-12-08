@@ -26,7 +26,8 @@ Core/Src/transmit_info.o: ../Core/Src/transmit_info.c \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
- ../Core/Inc/led_traffic.h ../Core/Inc/transmit_info.h
+ ../Core/Inc/led_traffic.h ../Core/Inc/transmit_info.h \
+ ../Core/Inc/buzzer.h
 
 ../Core/Inc/transmit_info.h:
 
@@ -91,3 +92,5 @@ Core/Src/transmit_info.o: ../Core/Src/transmit_info.c \
 ../Core/Inc/led_traffic.h:
 
 ../Core/Inc/transmit_info.h:
+
+../Core/Inc/buzzer.h:
