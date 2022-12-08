@@ -10,19 +10,8 @@
 
 #include"main.h"
 
-#define NORMAL_STATE SET
-#define PRESSED_STATE RESET
-
-extern int button1_flag;
-extern int button2_flag;
-extern int button3_flag;
-
-int isButton1Pressed();
-int isButton2Pressed();
-int isButton3Pressed();
-
-void getKeyInput1();
-void getKeyInput2();
-void getKeyInput3();
+int isButtonPress(int index);
+int isButtonLongPress(int index);
+void button_read();
 
 #endif /* INC_BUTTON_H_ */

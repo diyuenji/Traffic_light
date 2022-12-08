@@ -18,11 +18,6 @@ void setLEDGREEN1(){
 	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, 0);
 	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, 1);
 }
-void offLED1(){
-	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, 0);
-	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, 0);
-}
-
 
 void setLEDRED2(){
 	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, 1);
@@ -36,11 +31,6 @@ void setLEDGREEN2(){
 	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, 0);
 	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, 1);
 }
-void offLED2(){
-	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, 0);
-	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, 0);
-}
-
 
 void setLEDRED3(){
 	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, 1);
@@ -55,4 +45,17 @@ void setLEDGREEN3(){
 	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, 1);
 }
 
+void clearLED1(){
+	HAL_GPIO_WritePin(D2_GPIO_Port, D2_Pin, 0);
+	HAL_GPIO_WritePin(D3_GPIO_Port, D3_Pin, 0);
+}
+
+void clearLED2(){
+	HAL_GPIO_WritePin(D4_GPIO_Port, D4_Pin, 0);
+	HAL_GPIO_WritePin(D5_GPIO_Port, D5_Pin, 0);
+}
+
+void clearLED3(){
+	HAL_GPIO_WritePin(D6_GPIO_Port, D6_Pin, 0);
+	HAL_GPIO_WritePin(D7_GPIO_Port, D7_Pin, 1);
 }

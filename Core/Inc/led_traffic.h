@@ -12,14 +12,15 @@
 void setLEDRED1();
 void setLEDYELLOW1();
 void setLEDGREEN1();
-void offLED1();
+void clearLED1();
 
 void setLEDRED2();
 void setLEDYELLOW2();
 void setLEDGREEN2();
+void clearLED2();
 
 void setLEDRED3();
 void setLEDYELLOW3();
 void setLEDGREEN3();
-void offLED2();
+void clearLED3();
 #endif /* INC_LED_TRAFFIC_H_ */
