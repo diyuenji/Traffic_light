@@ -6,7 +6,7 @@
  */
 
 
-#include "manual_fsm.h"
+#include "fsm_manual.h"
 
 
 void fsm_manual_run(){
@@ -20,13 +20,14 @@ void fsm_manual_run(){
 				setTimer1(3000);
 			}
 
-			if(isButton2Pressed()){
+			if(isButtonPress(2)){
 				status=MAN_RED1_YELLOW2;
 				setTimer1(time_man_mode * 1000);
 			}
 
-			if (isButton1Pressed()){
+			if (isButtonPress(1)){
 				status = TUNING_RED1;
+				setTimer1(10);
 			}
 
 			break;
@@ -38,13 +39,14 @@ void fsm_manual_run(){
 				setTimer1(2000);
 			}
 
-			if(isButton2Pressed()){
+			if(isButtonPress(2)){
 				status=MAN_GREEN1_RED2;
 				setTimer1(time_man_mode * 1000);
 			}
 
-			if (isButton1Pressed()){
+			if (isButtonPress(1)){
 				status = TUNING_RED1;
+				setTimer1(10);
 			}
 
 			break;
@@ -57,13 +59,14 @@ void fsm_manual_run(){
 				setTimer1(3000);
 			}
 
-			if(isButton2Pressed()){
+			if(isButtonPress(2)){
 				status=MAN_YELLOW1_RED2;
 				setTimer1(time_man_mode * 1000);
 			}
 
-			if (isButton1Pressed()){
+			if (isButtonPress(1)){
 				status = TUNING_RED1;
+				setTimer1(10);
 			}
 
 			break;
@@ -76,13 +79,14 @@ void fsm_manual_run(){
 				setTimer1(2000);
 			}
 
-			if(isButton2Pressed()){
+			if(isButtonPress(2)){
 				status=MAN_RED1_GREEN2;
 				setTimer1(time_man_mode * 1000);
 			}
 
-			if (isButton1Pressed()){
+			if (isButtonPress(1)){
 				status = TUNING_RED1;
+				setTimer1(10);
 			}
 
 			break;

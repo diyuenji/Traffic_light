@@ -5,12 +5,12 @@
  *      Author: Admin
  */
 
-#ifndef INC_MANUAL_FSM_H_
-#define INC_MANUAL_FSM_H_
+#ifndef INC_FSM_MANUAL_H_
+#define INC_FSM_MANUAL_H_
 
 #include "global.h"
 #include "led_traffic.h"
 
 void fsm_manual_run();
 
-#endif /* INC_MANUAL_FSM_H_ */
+#endif /* INC_FSM_MANUAL_H_ */

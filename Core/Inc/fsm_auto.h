@@ -9,7 +9,7 @@
 #define INC_FSM_AUTO_H_
 
 #include "global.h"
-
+#include "led_traffic.h"
 void fsm_auto_run();
 
 

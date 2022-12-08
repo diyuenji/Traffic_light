@@ -24,7 +24,9 @@
 /* USER CODE BEGIN Includes */
 #include "global.h"
 #include "fsm_auto.h"
-#include "manual_fsm.h"
+#include "fsm_pedes.h"
+#include "fsm_manual.h"
+#include "fsm_tuning.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -97,10 +99,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   status = INIT;
+  status_pedes = INIT_PEDES;
   while (1)
   {
 	  fsm_auto_run();
 	  fsm_manual_run();
+	  fsm_pedes_run();
+	  fsm_tuning_run();
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -244,9 +249,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	getKeyInput1();
-	getKeyInput2();
-	getKeyInput3();
+	button_read();
 	timerRun();
 }
 /* USER CODE END 4 */

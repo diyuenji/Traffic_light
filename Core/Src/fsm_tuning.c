@@ -14,75 +14,105 @@ void fsm_tuning_run(){
 	switch(status){
 
 		case TUNING_RED1:
-			if(isButton2Pressed()){
-				RED_INC++;
-				//updateBuffer(mode+1, red_val+RED_INC);
-			}
 			setLEDRED1();
 			clearLED2();
-			if(isButton3Pressed()){
-				red_time_1+=RED_INC;
-				//updateBuffer(2, red_val);
+			if(isButtonPress(2)){
+				RED_INC++;
+
 			}
-			if(isButton1Pressed()){
+
+			if (isButtonLongPress(2)){
+				if (timer1_flag == 1){
+					RED_INC--;
+					setTimer1(200);
+				}
+			}
+			if(isButtonPress(3)){
+				red_time_1+=RED_INC;
+			}
+			if(isButtonPress(1)){
 				RED_INC=0;
 				status=TUNING_GREEN1;
-				//updateBuffer(mode+1, yellow_val)
+				setTimer1(10);
 			}
 			break;
 
 		case TUNING_GREEN1:
-			if(isButton2Pressed()){
-				GREEN_INC++;
-				//updateBuffer(mode+1, green_val+GREEN_INC);
-			}
+
 			setLEDGREEN1();
 			clearLED2();
-			if(isButton3Pressed()){
-				green_time_1+=GREEN_INC;
-				//updateBuffer(mode+1, green_val);
+
+			if(isButtonPress(2)){
+				GREEN_INC++;
 			}
-			if(isButton1Pressed()){
+
+			if (isButtonLongPress(2)){
+				if (timer1_flag == 1){
+					GREEN_INC--;
+					setTimer1(200);
+				}
+			}
+
+			if(isButtonPress(3)){
+				green_time_1+=GREEN_INC;
+			}
+			if(isButtonPress(1)){
 				GREEN_INC=0;
 				status=TUNING_YELLOW1;
+				setTimer1(10);
 			}
 			break;
 
 		case TUNING_YELLOW1:
-			if(isButton2Pressed()){
-				YELLOW_INC++;
-				//updateBuffer(mode+1, yellow_val+YELLOW_INC);
-			}
 			setLEDYELLOW1();
 			clearLED2();
-			if(isButton3Pressed()){
+
+			if(isButtonPress(2)){
+				YELLOW_INC++;
+			}
+
+			if (isButtonLongPress(2)){
+				if (timer1_flag == 1){
+					YELLOW_INC--;
+					setTimer1(200);
+				}
+			}
+
+			if(isButtonPress(3)){
 				yellow_time_1+=YELLOW_INC;
-				//updateBuffer(mode+1, yellow_val);
 
 			}
-			if(isButton1Pressed()){
+			if(isButtonPress(1)){
 				YELLOW_INC=0;
 				red_time_2=yellow_time_1+green_time_1;
 				status=TUNING_GREEN2;
-				//updateBuffer(mode+1, green_val);
-				}
+				setTimer1(10);
+			}
 			break;
 
 		case TUNING_GREEN2:
-			if(isButton2Pressed()){
-				GREEN_INC++;
-				//updateBuffer(mode+1, yellow_val+YELLOW_INC);
-			}
 			setLEDGREEN2();
 			clearLED1();
-			if(isButton3Pressed()){
-				green_time_2+=GREEN_INC;
-				//updateBuffer(mode+1, green_val);
+
+			if(isButtonPress(2)){
+				GREEN_INC++;
 			}
-			if(isButton1Pressed()){
+
+			if (isButtonLongPress(2)){
+				if (timer1_flag == 1){
+					GREEN_INC--;
+					setTimer1(200);
+				}
+			}
+
+			if(isButtonPress(3)){
+				green_time_2+=GREEN_INC;
+			}
+			if(isButtonPress(1)){
 				GREEN_INC=0;
 				yellow_time_2=red_time_1-green_time_2;
 				status=RED1_GREEN2;
+				setTimer1(green_time_2 * 1000);
 			}
 			break;
 

@@ -9,3 +9,4 @@
 ../Core/Src/led_traffic.c:43:6:setLEDGREEN3	8	static
 ../Core/Src/led_traffic.c:48:6:clearLED1	8	static
 ../Core/Src/led_traffic.c:53:6:clearLED2	8	static
+../Core/Src/led_traffic.c:58:6:clearLED3	8	static

@@ -6,10 +6,13 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Core/Src/button.c \
+../Core/Src/fsm_auto.c \
+../Core/Src/fsm_manual.c \
+../Core/Src/fsm_pedes.c \
+../Core/Src/fsm_tuning.c \
 ../Core/Src/global.c \
 ../Core/Src/led_traffic.c \
 ../Core/Src/main.c \
-../Core/Src/manual_fsm.c \
 ../Core/Src/software_timer.c \
 ../Core/Src/stm32f1xx_hal_msp.c \
 ../Core/Src/stm32f1xx_it.c \
@@ -19,10 +22,13 @@ C_SRCS += \
 
 OBJS += \
 ./Core/Src/button.o \
+./Core/Src/fsm_auto.o \
+./Core/Src/fsm_manual.o \
+./Core/Src/fsm_pedes.o \
+./Core/Src/fsm_tuning.o \
 ./Core/Src/global.o \
 ./Core/Src/led_traffic.o \
 ./Core/Src/main.o \
-./Core/Src/manual_fsm.o \
 ./Core/Src/software_timer.o \
 ./Core/Src/stm32f1xx_hal_msp.o \
 ./Core/Src/stm32f1xx_it.o \
@@ -32,10 +38,13 @@ OBJS += \
 
 C_DEPS += \
 ./Core/Src/button.d \
+./Core/Src/fsm_auto.d \
+./Core/Src/fsm_manual.d \
+./Core/Src/fsm_pedes.d \
+./Core/Src/fsm_tuning.d \
 ./Core/Src/global.d \
 ./Core/Src/led_traffic.d \
 ./Core/Src/main.d \
-./Core/Src/manual_fsm.d \
 ./Core/Src/software_timer.d \
 ./Core/Src/stm32f1xx_hal_msp.d \
 ./Core/Src/stm32f1xx_it.d \
@@ -51,7 +60,7 @@ Core/Src/%.o Core/Src/%.su: ../Core/Src/%.c Core/Src/subdir.mk
 clean: clean-Core-2f-Src
 
 clean-Core-2f-Src:
-	-$(RM) ./Core/Src/button.d ./Core/Src/button.o ./Core/Src/button.su ./Core/Src/global.d ./Core/Src/global.o ./Core/Src/global.su ./Core/Src/led_traffic.d ./Core/Src/led_traffic.o ./Core/Src/led_traffic.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/manual_fsm.d ./Core/Src/manual_fsm.o ./Core/Src/manual_fsm.su ./Core/Src/software_timer.d ./Core/Src/software_timer.o ./Core/Src/software_timer.su ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
+	-$(RM) ./Core/Src/button.d ./Core/Src/button.o ./Core/Src/button.su ./Core/Src/fsm_auto.d ./Core/Src/fsm_auto.o ./Core/Src/fsm_auto.su ./Core/Src/fsm_manual.d ./Core/Src/fsm_manual.o ./Core/Src/fsm_manual.su ./Core/Src/fsm_pedes.d ./Core/Src/fsm_pedes.o ./Core/Src/fsm_pedes.su ./Core/Src/fsm_tuning.d ./Core/Src/fsm_tuning.o ./Core/Src/fsm_tuning.su ./Core/Src/global.d ./Core/Src/global.o ./Core/Src/global.su ./Core/Src/led_traffic.d ./Core/Src/led_traffic.o ./Core/Src/led_traffic.su ./Core/Src/main.d ./Core/Src/main.o ./Core/Src/main.su ./Core/Src/software_timer.d ./Core/Src/software_timer.o ./Core/Src/software_timer.su ./Core/Src/stm32f1xx_hal_msp.d ./Core/Src/stm32f1xx_hal_msp.o ./Core/Src/stm32f1xx_hal_msp.su ./Core/Src/stm32f1xx_it.d ./Core/Src/stm32f1xx_it.o ./Core/Src/stm32f1xx_it.su ./Core/Src/syscalls.d ./Core/Src/syscalls.o ./Core/Src/syscalls.su ./Core/Src/sysmem.d ./Core/Src/sysmem.o ./Core/Src/sysmem.su ./Core/Src/system_stm32f1xx.d ./Core/Src/system_stm32f1xx.o ./Core/Src/system_stm32f1xx.su
 
 .PHONY: clean-Core-2f-Src
 

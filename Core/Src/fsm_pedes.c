@@ -12,19 +12,19 @@ void fsm_pedes_run(){
 	switch (status_pedes){
 		case INIT_PEDES:
 			clearLED3();
-			if (isButton4Pressed()){
+			if (isButtonPress(0)){
 				setTimer2((red_time_1 + red_time_2) * 2 * 1000);
-				status = PEDES_RUN;
+				status_pedes = PEDES_RUN;
 			}
 			break;
 		case PEDES_RUN:
 
-			if (status == RED1_GREEN2 || status == RED1_YELLOW){
-				setLEDGREEN3();
-			} else if (status == GREEN1_RED2){
+			if (status == GREEN1_RED2){
 				setLEDRED3();
-			} else {
+			} else if (status == YELLOW1_RED2){
 				setLEDYELLOW3();
+			} else {
+				setLEDGREEN3();
 			}
 
 			if (timer2_flag == 1){
