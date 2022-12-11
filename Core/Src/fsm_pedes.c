@@ -15,6 +15,7 @@ void fsm_pedes_run(){
 			if (isButtonPress(0)){
 				setTimer3((red_time_1 + red_time_2) * 2 * 1000);
 				status_pedes = PEDES_RUN;
+				setTimer4(10);
 			}
 			break;
 		case PEDES_RUN:
@@ -23,26 +24,30 @@ void fsm_pedes_run(){
 				setLEDRED3();
 			} else if (status == YELLOW1_RED2){
 				setLEDRED3();
-			} else if (val_info1<=yellow_pedes_time){
+			} else if (val_info1<yellow_pedes_time){
 				setLEDYELLOW3();
+				//buzzer(5000);
 				if(timer4_flag==1){
-					freq=(red_time_1-val_info1)*30>1000?1000:(red_time_1-val_info1)*30;
-					buzzer(freq);
+					//freq=(red_time_1-val_info1)*30>1000?1000:(red_time_1-val_info1)*30;
+					//buzzer(freq);
+					buzzer(5000);
 					setTimer4(250);
 				}
-				buzzer(0);
-				}
+				//buzzer(0);
+			}
 			else{
 				setLEDGREEN3();
+				//buzzer(1000);
 				if(timer4_flag==1){
-					freq=(red_time_1-val_info1)*30>600?600:(red_time_1-val_info1)*30;
-					buzzer(freq);
-					setTimer4(1000);
+					//freq=(red_time_1-val_info1)*30>600?600:(red_time_1-val_info1)*30;
+					//buzzer(freq);
+					buzzer(5000);
+					setTimer4(5000);
 				}
-				buzzer(0);
+				//buzzer(0);
 			}
 			if (timer3_flag == 1){
-				status = INIT_PEDES;
+				status_pedes = INIT_PEDES;
 				buzzer(0);
 			}
 
