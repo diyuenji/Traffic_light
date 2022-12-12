@@ -28,9 +28,9 @@ void fsm_pedes_run(){
 				setLEDYELLOW3();
 				//buzzer(5000);
 				if(timer4_flag==1){
-					//freq=(red_time_1-val_info1)*30>1000?1000:(red_time_1-val_info1)*30;
-					//buzzer(freq);
-					buzzer(5000);
+					freq=(red_time_1-val_info1)*100>5000?5000:(red_time_1-val_info1)*100;
+					buzzer(freq);
+					//buzzer(5000);
 					setTimer4(250);
 				}
 				//buzzer(0);
@@ -39,9 +39,9 @@ void fsm_pedes_run(){
 				setLEDGREEN3();
 				//buzzer(1000);
 				if(timer4_flag==1){
-					//freq=(red_time_1-val_info1)*30>600?600:(red_time_1-val_info1)*30;
-					//buzzer(freq);
-					buzzer(5000);
+					freq=(red_time_1-val_info1)*100>2000?2000:(red_time_1-val_info1)*30;
+					buzzer(freq);
+					//buzzer(5000);
 					setTimer4(5000);
 				}
 				//buzzer(0);
@@ -50,7 +50,7 @@ void fsm_pedes_run(){
 				status_pedes = INIT_PEDES;
 				buzzer(0);
 			}
-
+			buzzer(0);
 			break;
 
 	}
